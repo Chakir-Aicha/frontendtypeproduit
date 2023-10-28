@@ -1,13 +1,61 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 40px;
+  padding: 40px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Style pour le conteneur principal avec barre latérale et contenu */
+.container {
+  display: flex;
+  height: 500px;
+}
+
+/* Style de la barre latérale */
+.sidebar {
+  width: 200px;
+  background: #333; /* Couleur de fond de la barre latérale */
+  color: #fff; /* Couleur du texte de la barre latérale */
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style pour les éléments du menu de la barre latérale */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li{
+  font-size: 16px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center; /* Centrer le texte horizontalement */
+  text-decoration: none; /* Supprimer le soulignement des liens */
+  margin-bottom: 10px;
+  list-style: none; /* Supprimer les puces de la liste */
+}
+
+.sidebar li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Style du contenu principal à droite de la barre latérale */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #fff; /* Couleur de fond du contenu */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }

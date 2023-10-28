@@ -1,0 +1,47 @@
+/* Style de la barre latérale */
+
+
+/* Style de l'image dans la barre latérale */
+.sidebar-image img {
+    position: center;
+    width: 200px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto; /* Laissez la hauteur ajustée automatiquement pour maintenir les proportions de l'image */
+    margin-bottom: 10px; /* Marge en bas de l'image */
+}
+
+/* Reste de votre CSS pour ul, li, .triangle-icon, #add-button ... */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style de chaque élément de la liste */
+.sidebar li {
+    font-size: 16px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+/* Style de l'icône de triangle */
+.triangle-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    margin-right: 10px;
+}
+
+/* Style du bouton "Ajouter un type de produit" */
+#add-button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

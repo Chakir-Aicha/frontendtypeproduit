@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importez Routes au lieu de Switch
+import CreateProduct from "./components/CreateProduct";
+import CreateType from "./components/CreateType";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <Routes>
+              <Route path="/create" element={<CreateType />} /> {/* Utilisez 'element' au lieu de 'component' */}
+              <Route path="/" element={<CreateProduct />} />
+          </Routes>
+      </Router>
   );
 }
 
