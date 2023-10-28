@@ -30,16 +30,17 @@ body {
   padding: 0;
 }
 
-.sidebar li{
+.sidebar li a {
+  display: block;
   font-size: 16px;
   background-color: #444;
   padding: 10px;
   border-radius: 5px;
   color: #fff;
-  text-align: center; /* Centrer le texte horizontalement */
-  text-decoration: none; /* Supprimer le soulignement des liens */
+  text-align: center;
+  text-decoration: none;
   margin-bottom: 10px;
-  list-style: none; /* Supprimer les puces de la liste */
+  list-style: none;
 }
 
 .sidebar li:hover {

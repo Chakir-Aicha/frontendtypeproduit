@@ -2,11 +2,13 @@ import React,{useState,useEffect} from "react";
 import '../type.css'
 import image from './produit.png'
 import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import axios from "axios";
+import {faCirclePlus} from "@fortawesome/free-solid-svg-icons";
 export default function CreateProduct(){
     const [typeProduits, setTypeProduits] = useState([]);
     const [nouveauTypeProduit, setNouveauTypeProduit] = useState('');
-    // Utilisez useEffect pour récupérer les types de produits depuis l'API backend
+    //  récupérer les types de produits
     useEffect(() => {
         axios.get("http://localhost:8083/typeproduits")
             .then((response) => {
@@ -37,13 +39,17 @@ export default function CreateProduct(){
             </div>
             <div className="content">
                 <h1>Create a product</h1>
-                <select>
+                Type<select className="triangle-icon">
                     {typeProduits.map((typeProduit, index) => (
-                        <option key={index} className="triangle-icon"> {typeProduit.nom}
+                        <option key={index} > {typeProduit.nom}
                         </option>
                     ))}
                 </select>
-                <Link to="/create">Ajouter un type de produit</Link>
+                <span> Créer Type de Produit</span>
+                <Link to="/create">
+
+                    <FontAwesomeIcon icon={faCirclePlus} />
+                </Link>
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ export default function CreateType(){
     });
     const [nouvelleCaracteristique, setNouvelleCaracteristique] = useState({
         nom: '',
-        typeDonnees: 'integer', // Par défaut, text est sélectionné
+        typeDonnees: 'integer', // Par défaut, integer est sélectionné
     });
     const [ajouterCaracteristique, setAjouterCaracteristique] = useState(false);
 
@@ -89,8 +89,9 @@ export default function CreateType(){
                     <img src={image} alt="Sidebar Image" />
                 </div>
                 <ul>
-                    <li>add product</li>
-                    <li>List products</li>
+                    <Link to="/"><li>add product</li></Link>
+                    <Link>
+                    <li>List products</li></Link>
                 </ul>
             </div>
             <div className="content">
@@ -128,7 +129,7 @@ export default function CreateType(){
             <ul>
                 {typeProduit.caracteristiques.map((caracteristique, index) => (
                     <li key={index}>
-                        {caracteristique.nom} 
+                        {caracteristique.nom}
                     </li>
                 ))}
             </ul>
