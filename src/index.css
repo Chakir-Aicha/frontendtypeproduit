@@ -8,8 +8,10 @@ body {
   display: flex;
   height: 500px;
 }
-.liste{
-  list-style: circle;
+.caracteristique-item {
+  list-style-type: disc; /* Style de puce sous forme de point */
+  margin-left: 40px;
+  font-family: Inter/* Espace à gauche pour l'indentation */
 }
 .caracteristique{
   display: flex;

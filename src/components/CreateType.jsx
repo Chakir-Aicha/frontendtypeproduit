@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import '../index.css'
 import {faCirclePlus, faSave} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Swal from "sweetalert2";
 export default function CreateType(){
     const [typeProduit, setTypeProduit] = useState({
         nom: '',
@@ -68,13 +69,26 @@ export default function CreateType(){
             // Effectuez une requête POST avec Axios
             const response = await axios.post('http://localhost:8083/typeproduits', data);
             console.log("response",response);
+            if(response.status===201){
+                Swal.fire({
+                    text: "category aded successfly",
+                    icon: "success"
+                });
+            }else {
+                Swal.fire({
+                    text: "Connexion échouée.",
+                    icon: "error"
+                });
+            }
             setTypeProduit({
                 nom: '',
                 caracteristiques: [],
             });
         } catch (error) {
-            // Gérez les erreurs ici, par exemple, affichez un message d'erreur à l'utilisateur
-            console.error('Une erreur s\'est produite lors de l\'envoi des données :', error);
+            Swal.fire({
+                text: "Connexion échouée.",
+                icon: "error"
+            });
         }
     };
 
@@ -121,9 +135,9 @@ export default function CreateType(){
             ) : (
                 <button onClick={ajouterCaracteristiqueClick}>Ajouter Caractéristique<FontAwesomeIcon icon={faCirclePlus} style={{height: '20px'}}/></button>
             )}
-            <ul className="liste">
+            <ul className="liste" >
                 {typeProduit.caracteristiques.map((caracteristique, index) => (
-                    <li key={index}>
+                    <li key={index} className="caracteristique-item">
                         {caracteristique.nom}
                     </li>
                 ))}
