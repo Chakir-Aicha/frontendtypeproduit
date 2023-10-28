@@ -23,13 +23,11 @@ export default function CreateType(){
 
     const handleCaracteristiqueChange = (e) => {
         if (e.target.name === "type") {
-            // Si l'utilisateur change la valeur du menu déroulant, mettez à jour "typeDonnees"
             setNouvelleCaracteristique({
                 ...nouvelleCaracteristique,
                 typeDonnees: e.target.value,
             });
         } else {
-            // Si l'utilisateur change le nom de la caractéristique, mettez à jour "nom"
             setNouvelleCaracteristique({
                 ...nouvelleCaracteristique,
                 [e.target.name]: e.target.value,
@@ -67,11 +65,7 @@ export default function CreateType(){
         console.log(data);
             // Effectuez une requête POST avec Axios
             const response = await axios.post('http://localhost:8083/typeproduits', data);
-
-            // Gérez la réponse du serveur ici, par exemple, affichez une notification de succès
             console.log("response",response);
-
-            // Réinitialisez le formulaire si nécessaire
             setTypeProduit({
                 nom: '',
                 caracteristiques: [],

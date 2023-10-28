@@ -5,17 +5,16 @@ body {
   padding: 40px;
 }
 
-/* Style pour le conteneur principal avec barre latérale et contenu */
 .container {
   display: flex;
   height: 500px;
 }
 
-/* Style de la barre latérale */
+
 .sidebar {
   width: 200px;
-  background: #333; /* Couleur de fond de la barre latérale */
-  color: #fff; /* Couleur du texte de la barre latérale */
+  background: #333; /
+  color: #fff;
   padding: 20px;
 }
 
@@ -24,7 +23,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Style pour les éléments du menu de la barre latérale */
+
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -48,12 +47,12 @@ body {
   text-decoration: underline;
 }
 
-/* Style du contenu principal à droite de la barre latérale */
+
 .content {
   flex: 1;
   padding: 20px;
-  background: #fff; /* Couleur de fond du contenu */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content h2 {

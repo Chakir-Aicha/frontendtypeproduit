@@ -1,21 +1,18 @@
-/* Style de la barre latérale */
 
-
-/* Style de l'image dans la barre latérale */
 .sidebar-image img {
     position: center;
-    width: 200px; /* Ajustez la largeur de l'image selon vos besoins */
-    height: auto; /* Laissez la hauteur ajustée automatiquement pour maintenir les proportions de l'image */
-    margin-bottom: 10px; /* Marge en bas de l'image */
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Reste de votre CSS pour ul, li, .triangle-icon, #add-button ... */
+
 ul {
     list-style: none;
     padding: 0;
 }
 
-/* Style de chaque élément de la liste */
+
 .sidebar li {
     font-size: 16px;
     background-color: #444;
