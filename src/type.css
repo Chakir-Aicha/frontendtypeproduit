@@ -25,16 +25,20 @@ ul {
     list-style: none;
 }
 
-/* Style de l'icône de triangle */
+
+
 .triangle-icon {
-    width: 20px;
-    height: 20px;
-    background-color: #333;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    margin-right: 10px;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
 }
 
-/* Style du bouton "Ajouter un type de produit" */
+.triangle-icon option {
+    font-size: 14px;
+}
 #add-button {
     background-color: #0074d9;
     color: #fff;

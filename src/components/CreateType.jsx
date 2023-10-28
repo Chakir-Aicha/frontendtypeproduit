@@ -3,6 +3,8 @@ import axios from "axios";
 import image from "./produit.png";
 import {Link} from "react-router-dom";
 import '../index.css'
+import {faCirclePlus, faSave} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 export default function CreateType(){
     const [typeProduit, setTypeProduit] = useState({
         nom: '',
@@ -84,18 +86,17 @@ export default function CreateType(){
                 </div>
                 <ul>
                     <Link to="/"><li>add product</li></Link>
-                    <Link>
-                    <li>List products</li></Link>
+                    <Link><li to="/list">List products</li></Link>
                 </ul>
             </div>
             <div className="content">
-                <h2>Créer un Type de Produit</h2>
+                <h2>Create Category</h2>
 
-            <label>Nom du Type de Produit</label>
+            <label>Libelle:</label>
             <input type="text" value={typeProduit.nom} onChange={handleNomChange} />
-            <h3>Ajouter des Caractéristiques</h3>
+            <h3>Caractéristiques:</h3>
             {ajouterCaracteristique ? (
-                <div>
+                <div className="caracteristique">
                     <input
                         type="text"
                         placeholder="Nom de la Caractéristique"
@@ -115,19 +116,19 @@ export default function CreateType(){
                         <option value="double">Double</option>
                         <option value="date">Date</option>
                     </select>
-                    <button onClick={ajouterCaracteristiqueSubmit}>Ajouter Caractéristique</button>
+                    <button onClick={ajouterCaracteristiqueSubmit}>Ajouter Caractéristique <FontAwesomeIcon icon={faSave} /></button>
                 </div>
             ) : (
-                <button onClick={ajouterCaracteristiqueClick}>Ajouter Caractéristique</button>
+                <button onClick={ajouterCaracteristiqueClick}>Ajouter Caractéristique<FontAwesomeIcon icon={faCirclePlus} style={{height: '20px'}}/></button>
             )}
-            <ul>
+            <ul className="liste">
                 {typeProduit.caracteristiques.map((caracteristique, index) => (
                     <li key={index}>
                         {caracteristique.nom}
                     </li>
                 ))}
             </ul>
-            <button onClick={handleSubmit}>Créer Type de Produit</button>
+            <button onClick={handleSubmit}>Submit</button>
         </div>
         </div>
     );
