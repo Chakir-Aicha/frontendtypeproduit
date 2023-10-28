@@ -81,7 +81,7 @@ select{
 
 .sidebar li:hover {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .content {
   flex: 1;
